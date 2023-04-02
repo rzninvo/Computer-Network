@@ -12,7 +12,7 @@ The client is executed and sends a Discovery message, then waits for an Offer me
 * After sending the second DISCOVER, it does not wait for the interval-initial duration, but this interval is calculated by the R2P formula, where R is a random number between 0 and 1, and P is the Previous interval. This increase in interval lasts until it reaches cutoff-backoff, and if it exceeds that, it will be set to that value.
 
 # Server:
-The server is always ready to receive a DHCP Discovery, and when it receives one, it sends an Offer and then waits to receive a Request. After receiving a Request, it sends an Ack message. The following implementation details should be considered:
+The server is always ready to receive a DHCP Discovery, and when it receives one, it sends an Offer and then waits to receive a Request. After receiving a Request, it sends an Ack message.
 
 ## Implementation Details:
 
